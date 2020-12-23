@@ -1,0 +1,44 @@
+ Book: 
+  # attributes:
+    1- id
+    2- title, 
+    3- publication_date
+    4- author
+    5- genre 
+    6- publisher
+    7- language
+  # functions:
+    - 
+================================================
+LocalReader:
+  # attributes:
+    - id
+    - name
+    - gender
+    - birthday
+    - height
+    - weight
+    - employment.
+  # functions:
+    - 
+================================================
+[ Librarians ] has CLI to talk to server
+
+Librarians:
+  # functions on (readers):
+    - add a reader
+    - remove a reader
+    - search for a reader by id or name
+    - get readers info
+  # functions on (books):
+    - add a book
+    - search for a book by id or name
+    - load books info
+    - save books info
+    - sort books by title
+    - sort by publication date
+================================================
+No DB ... store data in text files
+================================================
+Implement [ 2 servers ] (main server) and (backup server)
+backup server should start if the main server is down
