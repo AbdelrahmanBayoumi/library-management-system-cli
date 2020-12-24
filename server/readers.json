@@ -1,0 +1,13 @@
+{
+  "readers": [
+    {
+      "id": "1",
+      "name": "name_01",
+      "gender": "gender_01",
+      "birthday": "birthday_01",
+      "height": "height_01",
+      "weight": "weight_01",
+      "employment": "employment_01"
+    }
+  ]
+}

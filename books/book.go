@@ -1,4 +1,4 @@
-package main
+package books
 
 import (
 	"encoding/json"
@@ -141,6 +141,14 @@ func (books Books) SortByPublicationDate() {
 		return books.Books[i].PublicationDate < books.Books[j].PublicationDate
 	})
 }
+
+// SortByTitle ...
+func (books Books) SortByTitle() {
+	sort.SliceStable(books.Books, func(i, j int) bool {
+		return books.Books[i].Title < books.Books[j].Title
+	})
+}
+
 func main() {
 	books := GetAllBooks()
 
@@ -163,8 +171,7 @@ func main() {
 	// 	fmt.Println(book1.ToString())
 	// }
 
-	// Sort by age, keeping original order or equal elements.
-
+	// books.SortByTitle()
 	fmt.Println("===================================")
 	books.PrintAll()
 }

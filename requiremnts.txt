@@ -12,13 +12,13 @@
 ================================================
 LocalReader:
   # attributes:
-    - id
-    - name
-    - gender
-    - birthday
-    - height
-    - weight
-    - employment.
+    1- id
+    2- name
+    3- gender
+    4- birthday
+    5- height
+    6- weight
+    7- employment.
   # functions:
     - 
 ================================================
@@ -31,14 +31,44 @@ Librarians:
     - search for a reader by id or name
     - get readers info
   # functions on (books):
-    - add a book
-    - search for a book by id or name
-    - load books info
-    - save books info
-    - sort books by title
-    - sort by publication date
+    1- add a book !!!!!!!!!
+    2- search for a book by id or name(title)
+    3- load books info !!!!!!!!!
+    4- save books info
+    5- sort books by title
+    6- sort by publication date
 ================================================
 No DB ... store data in text files
 ================================================
 Implement [ 2 servers ] (main server) and (backup server)
 backup server should start if the main server is down
+================================================
+  go run server.go     -     go run client.go
+================================================
+1- add book (returns the added book)
+
+    go run client.go --book --add '{"id":"1","title":"title_01","publicationDate":"publicationDate_01","author":"author_01","genre":"genre_01","publisher":"publisher_01","language":"language_01"}'
+    
+2- search book by id (returns the book if found)
+
+    go run client.go --book --search --id "{'id' : '3'}"
+    
+3- search book by title (returns the book if found)
+
+    go run client.go --book --search --title "{'title' : 'Gardening Advice '}"
+
+4- get all books (returns list of books)
+
+    go run client.go --books
+    
+5- sort by title (returns list of books sorted by title)
+
+    go run client.go --books --sort --title
+    
+
+6- sort by publication_date (returns list of books sorted by publication_date)
+
+    go run client.go --books --sort --publication_date
+    
+
+
