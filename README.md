@@ -4,13 +4,13 @@ Library management system using Golang
 
 
 ## Requirements
-* [go 1.15.3](https://golang.org/)
+* [GO 1.15.3](https://golang.org/)
 
 
 
 ## Getting Started
 
-1- Start the server.go, that is located in sever dirictory 
+1- Start the server.go, that is located in sever directory 
     
     go run server.go
 
