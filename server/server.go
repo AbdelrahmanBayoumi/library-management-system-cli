@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	bookModel "library-management-system-cli/books"
-	readerModel "library-management-system-cli/readers"
+	bookModel "library-management-system-cli/model/books"
+	readerModel "library-management-system-cli/model/readers"
 )
 
 func main() {
