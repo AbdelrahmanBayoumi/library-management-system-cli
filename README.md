@@ -16,7 +16,7 @@ Library management system using Golang
 
 3- You can now use the client cli [(how to use the client)](/README.md#books-operations-)
     
-    go run server.go --help
+    go run client.go --help
 
 
 
