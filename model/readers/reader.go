@@ -125,10 +125,8 @@ func (r Reader) RemoveReader(readers *Readers) {
 			break
 		}
 	}
-	fmt.Println("Found in INDEX:", index)
 	(*readers).Readers = removeIndex((*readers).Readers, index)
 
-	fmt.Println("LEN: ", len(readers.Readers))
 	// Preparing the data to be marshalled and written.
 	dataBytes, err := json.Marshal(*readers)
 	if err != nil {

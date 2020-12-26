@@ -37,7 +37,8 @@ func (books Books) PrintAll() {
 	}
 }
 
-func getJSONstring() string {
+// GetJSONstring ...
+func GetJSONstring() string {
 	err := utils.CheckFile(fileName)
 	if err != nil {
 		log.Println(err)
@@ -79,7 +80,7 @@ func GetAllBooks() Books {
 	// read our opened xmlFile as a byte array.
 	byteValue, _ := ioutil.ReadAll(jsonFile)
 
-	fmt.Println("byteValue:", string(byteValue))
+	// fmt.Println("byteValue:", string(byteValue))
 	// we initialize our Books array
 	var books Books
 
