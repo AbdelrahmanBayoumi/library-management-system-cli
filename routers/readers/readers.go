@@ -42,7 +42,7 @@ func ServeHTTP(w http.ResponseWriter, r *http.Request) {
 				panic(err)
 			} else {
 				w.WriteHeader(http.StatusOK)
-				w.Write([]byte(`{"message": "reader deleted successfully!","reader":` + string(json) + `}`))
+				w.Write([]byte(string(json)))
 			}
 		}
 	default:

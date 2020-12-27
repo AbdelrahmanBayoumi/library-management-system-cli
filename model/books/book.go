@@ -8,6 +8,7 @@ import (
 	"log"
 	"os"
 	"sort"
+	"strings"
 )
 
 const fileName string = "books.json"
@@ -31,7 +32,6 @@ type Book struct {
 
 // PrintAll ...
 func (books Books) PrintAll() {
-
 	for i := 0; i < len(books.Books); i++ {
 		fmt.Println(books.Books[i].ToString())
 	}
@@ -129,7 +129,7 @@ func (books Books) GetBookByID(id string) (Book, int) {
 // GetBookByTitle ...
 func (books Books) GetBookByTitle(title string) (Book, int) {
 	for i := 0; i < len(books.Books); i++ {
-		if books.Books[i].Title == title {
+		if strings.ToLower(books.Books[i].Title) == strings.ToLower(title) {
 			return books.Books[i], 1
 		}
 	}

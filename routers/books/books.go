@@ -119,9 +119,10 @@ func getAllBooks(w http.ResponseWriter, r *http.Request) {
 }
 
 func getBooksSorted(w http.ResponseWriter, r *http.Request, sortMethod string) {
-	println("GetBooksSorted() ...")
+	fmt.Println("GetBooksSorted() ...")
 	w.Header().Set("Content-Type", "application/json")
 	books := bookModel.GetAllBooks()
+	fmt.Println("sortMethod:", sortMethod)
 	switch sortMethod {
 	case "title":
 		books.SortByTitle()

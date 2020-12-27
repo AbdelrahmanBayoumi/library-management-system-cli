@@ -90,8 +90,7 @@ func GetAllReaders() Readers {
 
 // ToString ...
 func (r Reader) ToString() string {
-	// fmt.Println(b)
-	return "ID: " + r.ID + ", " + "Name: " + r.Name
+	return "ID: " + r.ID + ", " + "Name: " + r.Name + ", " + "Gender: " + r.Gender + ", " + "Birthday: " + r.Birthday + ", " + "Height: " + r.Height + ", " + "Weight: " + r.Weight + ", " + "Employment: " + r.Employment
 }
 
 // InsertReader function to insert a Reader readers.json
