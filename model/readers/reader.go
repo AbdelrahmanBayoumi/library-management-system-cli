@@ -7,6 +7,7 @@ import (
 	"library-management-system-cli/utils"
 	"log"
 	"os"
+	"strings"
 )
 
 const fileName string = "readers.json"
@@ -155,7 +156,7 @@ func (readers Readers) GetReaderByID(id string) (Reader, int) {
 // GetReaderByName ...
 func (readers Readers) GetReaderByName(name string) (Reader, int) {
 	for i := 0; i < len(readers.Readers); i++ {
-		if readers.Readers[i].Name == name {
+		if strings.ToLower(readers.Readers[i].Name) == strings.ToLower(name) {
 			return readers.Readers[i], 1
 		}
 	}

@@ -1,6 +1,9 @@
 package utils
 
-import "os"
+import (
+	"os"
+	"strings"
+)
 
 // CheckFile checks if file exist
 // , if not exist it creates the file
@@ -13,4 +16,10 @@ func CheckFile(filename string) error {
 		}
 	}
 	return nil
+}
+
+// ReplaceURLSpaces removes any space from string
+// and add %20
+func ReplaceURLSpaces(s string) string {
+	return strings.Replace(s, " ", "%20", -1)
 }
